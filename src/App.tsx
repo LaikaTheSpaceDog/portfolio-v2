@@ -1,13 +1,11 @@
 import React from 'react'
-import './App.css'
+import AppComponent from './appStyles'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Awesome new portfolio incoming!</p>
-      </header>
-    </div>
+    <AppComponent>
+      <p>Awesome new portfolio incoming!</p>
+    </AppComponent>
   )
 }
 
