@@ -1,11 +1,14 @@
 import React from 'react'
-import AppComponent from './appStyles'
+
+import Home from './Home'
+import Experience from './Experience'
 
 const App: React.FC = () => {
   return (
-    <AppComponent>
-      <p>Awesome new portfolio incoming!</p>
-    </AppComponent>
+    <>
+      <Home />
+      <Experience />
+    </>
   )
 }
 
