@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
+import '@fontsource/work-sans'
+import { palette } from './styleVariables'
 
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -47,11 +49,12 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         height: 100vh;
-        font-family: "Poppins", sans-serif;
+        font-family: "Work Sans", sans-serif;
+        color: ${palette.black};
     }
-    .container {
-        width: 100%;
-        height: 100%;
+    #root {
+        min-height: 100%;
+        background-color: ${palette.grey};
     }
 `
 

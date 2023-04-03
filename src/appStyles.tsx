@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { palette } from './utils/styleVariables'
 
 const AppComponent = styled.div`
-  background-color: ${palette.orange};
+  min-height: 100vh;
+  padding: 20px 60px;
 `
 export default AppComponent
