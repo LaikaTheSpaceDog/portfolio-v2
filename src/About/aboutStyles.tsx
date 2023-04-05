@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { palette } from '../utils/styleVariables'
 
-export const ExperienceSection = styled.section`
-  background-color: ${palette.cream};
+export const AboutSection = styled.section`
+  background-color: ${palette.navy};
   padding: 1.25rem 5rem;
   display: flex;
   flex-direction: column;
@@ -10,10 +10,12 @@ export const ExperienceSection = styled.section`
   min-height: 500px;
 `
 
-export const ExperienceTitle = styled.h2`
-  color: ${palette.navy};
+export const AboutTitle = styled.h2`
+  color: ${palette.red};
   font-size: 4rem;
   margin-bottom: 1.5rem;
 `
 
-export const ExperienceText = styled.p``
+export const AboutText = styled.p`
+  color: ${palette.white};
+`
