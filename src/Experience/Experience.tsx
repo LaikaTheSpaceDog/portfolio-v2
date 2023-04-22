@@ -7,7 +7,7 @@ import {
 
 const Experience: React.FC = () => {
   return (
-    <ExperienceSection>
+    <ExperienceSection id="experience">
       <ExperienceTitle>Experience</ExperienceTitle>
       <ExperienceText>Blah blah blah</ExperienceText>
     </ExperienceSection>

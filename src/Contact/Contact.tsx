@@ -3,7 +3,7 @@ import { ContactSection, ContactText, ContactTitle } from './contactStyles'
 
 const Contact: React.FC = () => {
   return (
-    <ContactSection>
+    <ContactSection id="contact">
       <ContactTitle>Contact</ContactTitle>
       <ContactText>Blah blah blah</ContactText>
     </ContactSection>

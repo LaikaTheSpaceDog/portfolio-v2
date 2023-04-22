@@ -2,21 +2,20 @@ import styled from 'styled-components'
 import { palette } from '../utils/styleVariables'
 
 export const HomeSection = styled.section`
-  min-height: 100vh;
+  height: 100vh;
   background-color: ${palette.cream};
   padding: 1.25rem 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 `
 
 export const HomeTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 6rem;
   color: ${palette.navy};
 `
 
 export const HomeSubtitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: ${palette.navy};
   margin-bottom: 1.5rem;
 `
@@ -34,5 +33,40 @@ export const HomeStop = styled.span`
     50% {
       opacity: 0;
     }
+  }
+`
+export const HomeLogo = styled.div`
+  width: 200px;
+  height: 172.5px;
+`
+export const HomeHeader = styled.header`
+  display: flex;
+  margin: 1.25rem 0;
+  position: absolute;
+  justify-content: space-between;
+  width: calc(100% - 10rem);
+`
+
+export const HomeMenu = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+`
+
+export const HomeMenuItem = styled.a`
+  font-size: 2rem;
+  color: ${palette.navy};
+  font-family: Bergen Mono W05 Regular;
+  text-decoration: none;
+`
+
+export const HomeMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: calc(172.5px + 2.5rem);
+  flex: 1;
+  @media (min-height: 700px) {
+    padding-top: 0;
   }
 `

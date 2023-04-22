@@ -7,7 +7,7 @@ import {
 
 const Portfolio: React.FC = () => {
   return (
-    <PortfolioSection>
+    <PortfolioSection id="portfolio">
       <PortfolioTitle>Portfolio</PortfolioTitle>
       <PortfolioText>Blah blah blah</PortfolioText>
     </PortfolioSection>

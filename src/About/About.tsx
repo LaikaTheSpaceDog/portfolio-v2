@@ -3,7 +3,7 @@ import { AboutSection, AboutText, AboutTitle } from './aboutStyles'
 
 const About: React.FC = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutTitle>About</AboutTitle>
       <AboutText>Blah blah blah</AboutText>
     </AboutSection>
