@@ -38,6 +38,7 @@ export const HomeStop = styled.span`
 export const HomeLogo = styled.div`
   width: 200px;
   height: 172.5px;
+  margin-left: -40px;
 
   svg {
     :hover {
@@ -65,6 +66,7 @@ export const HomeMenuItem = styled.div`
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.5s ease;
+  cursor: pointer;
 
   :hover {
     border-bottom: 2px solid ${palette.red};

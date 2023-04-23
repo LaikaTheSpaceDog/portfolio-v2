@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-scroll'
+
 import {
   HomeSection,
   HomeStop,
@@ -24,16 +26,24 @@ const Home: React.FC = () => {
         </a>
         <HomeMenu>
           <HomeMenuItem>
-            <a href="#about">About</a>
+            <Link to="about" smooth={true} duration={500}>
+              About
+            </Link>
           </HomeMenuItem>
           <HomeMenuItem>
-            <a href="#experience">Experience</a>
+            <Link to="experience" smooth={true} duration={500}>
+              Experience
+            </Link>
           </HomeMenuItem>
           <HomeMenuItem>
-            <a href="#portfolio">Portfolio</a>
+            <Link to="portfolio" smooth={true} duration={500}>
+              Portfolio
+            </Link>
           </HomeMenuItem>
           <HomeMenuItem>
-            <a href="#contact">Contact</a>
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
           </HomeMenuItem>
         </HomeMenu>
       </HomeHeader>
