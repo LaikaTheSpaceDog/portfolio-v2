@@ -38,6 +38,14 @@ export const HomeStop = styled.span`
 export const HomeLogo = styled.div`
   width: 200px;
   height: 172.5px;
+
+  svg {
+    :hover {
+      .bolt {
+        fill: ${palette.red};
+      }
+    }
+  }
 `
 export const HomeHeader = styled.header`
   display: flex;
