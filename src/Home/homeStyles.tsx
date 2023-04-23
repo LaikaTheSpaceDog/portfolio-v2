@@ -44,7 +44,7 @@ export const HomeHeader = styled.header`
   margin: 1.25rem 0;
   position: absolute;
   justify-content: space-between;
-  width: calc(100% - 10rem);
+  width: calc(100vw - 10rem);
 `
 
 export const HomeMenu = styled.div`
@@ -53,11 +53,21 @@ export const HomeMenu = styled.div`
   gap: 2rem;
 `
 
-export const HomeMenuItem = styled.a`
-  font-size: 2rem;
-  color: ${palette.navy};
-  font-family: Bergen Mono W05 Regular;
-  text-decoration: none;
+export const HomeMenuItem = styled.div`
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.5s ease;
+
+  :hover {
+    border-bottom: 2px solid ${palette.red};
+  }
+
+  a {
+    font-size: 1.5rem;
+    color: ${palette.navy};
+    font-family: Bergen Mono W05 Regular;
+    text-decoration: none;
+  }
 `
 
 export const HomeMain = styled.div`

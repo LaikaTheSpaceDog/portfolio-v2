@@ -60,6 +60,9 @@ const GlobalStyle = createGlobalStyle`
     h1,h2,h3,h4,h5,h6 {
         font-family: Bergen Mono W05 Regular
     }
+    html {
+        overflow-x: hidden;
+    }
 `
 
 export default GlobalStyle

@@ -23,10 +23,18 @@ const Home: React.FC = () => {
           </HomeLogo>
         </a>
         <HomeMenu>
-          <HomeMenuItem href="#about">About</HomeMenuItem>
-          <HomeMenuItem href="#experience">Experience</HomeMenuItem>
-          <HomeMenuItem href="#portfolio">Portfolio</HomeMenuItem>
-          <HomeMenuItem href="#contact">Contact</HomeMenuItem>
+          <HomeMenuItem>
+            <a href="#about">About</a>
+          </HomeMenuItem>
+          <HomeMenuItem>
+            <a href="#experience">Experience</a>
+          </HomeMenuItem>
+          <HomeMenuItem>
+            <a href="#portfolio">Portfolio</a>
+          </HomeMenuItem>
+          <HomeMenuItem>
+            <a href="#contact">Contact</a>
+          </HomeMenuItem>
         </HomeMenu>
       </HomeHeader>
       <HomeMain>
