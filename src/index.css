@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Bergen Mono W05 Regular';
+  src: url('assets/fonts/7694988/ad27cbbd-0840-499c-8512-0883d5a7775e.woff2')
+      format('woff2'),
+    url('assets/fonts/7694988/586018cc-4f2f-4901-a56c-ef273b3cd200.woff')
+      format('woff');
+}

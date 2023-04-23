@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
+        font-size: 16px;
     }
     ol, ul {
         list-style: none;
@@ -51,10 +52,19 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh;
         font-family: "Work Sans", sans-serif;
         color: ${palette.black};
+        background-color: ${palette.cream};
     }
     #root {
         min-height: 100%;
-        background-color: ${palette.grey};
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-family: Bergen Mono W05 Regular
+    }
+    html {
+        overflow-x: hidden;
+    }
+    ::selection {
+        background: ${palette.yellow};
     }
 `
 
