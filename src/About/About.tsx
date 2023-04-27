@@ -61,7 +61,7 @@ const About: React.FC = () => {
             </AboutTechItem>
             <AboutTechItem>
               <AboutIcon src={wpIcon} />
-              <AboutText>Wordpress</AboutText>
+              <AboutText>WordPress</AboutText>
             </AboutTechItem>
           </AboutRow>
         </AboutTextSection>
