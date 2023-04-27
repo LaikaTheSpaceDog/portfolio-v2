@@ -2,14 +2,17 @@ import React from 'react'
 import {
   PortfolioSection,
   PortfolioText,
-  PortfolioTitle
+  PortfolioTitle,
+  PortfolioInner
 } from './portfolioStyles'
 
 const Portfolio: React.FC = () => {
   return (
     <PortfolioSection id="portfolio">
-      <PortfolioTitle>Portfolio</PortfolioTitle>
-      <PortfolioText>Blah blah blah</PortfolioText>
+      <PortfolioInner>
+        <PortfolioTitle>Portfolio</PortfolioTitle>
+        <PortfolioText>Blah blah blah</PortfolioText>
+      </PortfolioInner>
     </PortfolioSection>
   )
 }

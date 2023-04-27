@@ -3,11 +3,11 @@ import { palette } from '../utils/styleVariables'
 
 export const PortfolioSection = styled.section`
   background-color: ${palette.navy};
-  padding: 1.25rem 5rem;
+  padding: 2.5rem 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 500px;
+  align-items: center;
 `
 
 export const PortfolioTitle = styled.h2`
@@ -18,4 +18,8 @@ export const PortfolioTitle = styled.h2`
 
 export const PortfolioText = styled.p`
   color: ${palette.white};
+`
+export const PortfolioInner = styled.div`
+  max-width: 1200px;
+  width: 100%;
 `
