@@ -3,11 +3,16 @@ import { palette } from '../utils/styleVariables'
 
 export const ContactSection = styled.section`
   background-color: ${palette.cream};
-  padding: 1.25rem 5rem;
+  padding: 2.5rem 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 500px;
+  align-items: center;
+`
+
+export const ContactInner = styled.div`
+  max-width: 1200px;
+  width: 100%;
 `
 
 export const ContactTitle = styled.h2`

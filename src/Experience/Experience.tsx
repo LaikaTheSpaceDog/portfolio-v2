@@ -2,14 +2,17 @@ import React from 'react'
 import {
   ExperienceSection,
   ExperienceText,
-  ExperienceTitle
+  ExperienceTitle,
+  ExperienceInner
 } from './experienceStyles'
 
 const Experience: React.FC = () => {
   return (
     <ExperienceSection id="experience">
-      <ExperienceTitle>Experience</ExperienceTitle>
-      <ExperienceText>Blah blah blah</ExperienceText>
+      <ExperienceInner>
+        <ExperienceTitle>Experience</ExperienceTitle>
+        <ExperienceText>Blah blah blah</ExperienceText>
+      </ExperienceInner>
     </ExperienceSection>
   )
 }

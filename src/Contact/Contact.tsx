@@ -1,11 +1,18 @@
 import React from 'react'
-import { ContactSection, ContactText, ContactTitle } from './contactStyles'
+import {
+  ContactSection,
+  ContactText,
+  ContactTitle,
+  ContactInner
+} from './contactStyles'
 
 const Contact: React.FC = () => {
   return (
     <ContactSection id="contact">
-      <ContactTitle>Contact</ContactTitle>
-      <ContactText>Blah blah blah</ContactText>
+      <ContactInner>
+        <ContactTitle>Contact</ContactTitle>
+        <ContactText>Blah blah blah</ContactText>
+      </ContactInner>
     </ContactSection>
   )
 }

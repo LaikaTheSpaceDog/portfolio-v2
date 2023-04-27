@@ -13,7 +13,7 @@ import {
   HomeMenu,
   HomeMenuItem
 } from './homeStyles'
-import { ReactComponent as Logo } from '../assets/images/logo.svg'
+import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
 
 const Home: React.FC = () => {
   return (
@@ -53,8 +53,8 @@ const Home: React.FC = () => {
         </HomeTitle>
         <HomeSubtitle>Frontend Engineer</HomeSubtitle>
         <HomeText>
-          Hey, my name is Oscar and I specialise in crafting beautiful frontend
-          apps with great user experiences.
+          I specialise in crafting beautiful frontend apps with great user
+          experiences.
         </HomeText>
       </HomeMain>
     </HomeSection>

@@ -7,6 +7,7 @@ export const HomeSection = styled.section`
   padding: 1.25rem 5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 export const HomeTitle = styled.h1`
@@ -54,6 +55,7 @@ export const HomeHeader = styled.header`
   position: absolute;
   justify-content: space-between;
   width: calc(100vw - 10rem);
+  max-width: 1200px;
 `
 
 export const HomeMenu = styled.div`
@@ -86,6 +88,8 @@ export const HomeMain = styled.div`
   justify-content: center;
   padding-top: calc(172.5px + 2.5rem);
   flex: 1;
+  width: 100%;
+  max-width: 1200px;
   @media (min-height: 700px) {
     padding-top: 0;
   }
