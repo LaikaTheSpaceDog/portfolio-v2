@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { palette } from 'src/utils/styleVariables'
 
 export const AboutSection = styled.section`

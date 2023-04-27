@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+
 import '@fontsource/work-sans'
+
 import { palette } from './styleVariables'
 
 const GlobalStyle = createGlobalStyle`

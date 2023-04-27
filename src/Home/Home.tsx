@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
+import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
+
 import {
+  HomeHeader,
+  HomeLogo,
+  HomeMain,
+  HomeMenu,
+  HomeMenuItem,
   HomeSection,
   HomeStop,
   HomeSubtitle,
   HomeText,
-  HomeTitle,
-  HomeLogo,
-  HomeHeader,
-  HomeMain,
-  HomeMenu,
-  HomeMenuItem
+  HomeTitle
 } from './homeStyles'
-import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
 
 const Home: React.FC = () => {
   return (

@@ -1,9 +1,10 @@
 import React from 'react'
+
 import {
+  ContactInner,
   ContactSection,
   ContactText,
-  ContactTitle,
-  ContactInner
+  ContactTitle
 } from './contactStyles'
 
 const Contact: React.FC = () => {

@@ -1,25 +1,26 @@
 import React from 'react'
+
+import jsIcon from 'src/assets/images/icons/js.svg'
+import laravelIcon from 'src/assets/images/icons/laravel.svg'
+import phpIcon from 'src/assets/images/icons/php.svg'
+import reactIcon from 'src/assets/images/icons/react.svg'
+import tsIcon from 'src/assets/images/icons/ts.svg'
+import wpIcon from 'src/assets/images/icons/wordpress.svg'
+import me from 'src/assets/images/me.png'
+
 import {
-  AboutSection,
-  AboutText,
-  AboutTitle,
-  AboutTextSection,
-  AboutImageSection,
+  AboutIcon,
   AboutImage,
   AboutImageContainer,
+  AboutImageSection,
   AboutInner,
   AboutRow,
+  AboutSection,
   AboutTechItem,
-  AboutIcon
+  AboutText,
+  AboutTextSection,
+  AboutTitle
 } from './aboutStyles'
-
-import me from 'src/assets/images/me.png'
-import reactIcon from 'src/assets/images/icons/react.svg'
-import jsIcon from 'src/assets/images/icons/js.svg'
-import tsIcon from 'src/assets/images/icons/ts.svg'
-import phpIcon from 'src/assets/images/icons/php.svg'
-import laravelIcon from 'src/assets/images/icons/laravel.svg'
-import wpIcon from 'src/assets/images/icons/wordpress.svg'
 
 const About: React.FC = () => {
   return (

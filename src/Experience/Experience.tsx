@@ -1,9 +1,10 @@
 import React from 'react'
+
 import {
+  ExperienceInner,
   ExperienceSection,
   ExperienceText,
-  ExperienceTitle,
-  ExperienceInner
+  ExperienceTitle
 } from './experienceStyles'
 
 const Experience: React.FC = () => {

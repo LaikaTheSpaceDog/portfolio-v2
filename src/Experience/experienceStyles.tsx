@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { palette } from '../utils/styleVariables'
+
+import { palette } from 'src/utils/styleVariables'
 
 export const ExperienceSection = styled.section`
   background-color: ${palette.cream};

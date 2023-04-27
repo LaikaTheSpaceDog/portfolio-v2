@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Home from './Home'
 import About from './About'
-import Experience from './Experience'
-import Portfolio from './Portfolio'
 import Contact from './Contact'
+import Experience from './Experience'
+import Home from './Home'
+import Portfolio from './Portfolio'
 
 const App: React.FC = () => {
   return (

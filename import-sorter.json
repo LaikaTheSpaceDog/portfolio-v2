@@ -1,0 +1,16 @@
+{
+  "generalConfiguration.sortOnBeforeSave": true,
+  "importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 80,
+  "importStringConfiguration.tabSize": 2,
+  "importSorter.sortConfiguration.removeUnusedImports": true,
+  "importSorter.sortConfiguration.joinImportPaths": true,
+  "importSorter.importStringConfiguration.trailingComma": "multi",
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "regex": "^src",
+      "orderLevel": 20,
+      "type": "path"
+    }
+  ]
+}

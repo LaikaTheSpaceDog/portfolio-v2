@@ -1,9 +1,10 @@
 import React from 'react'
+
 import {
+  PortfolioInner,
   PortfolioSection,
   PortfolioText,
-  PortfolioTitle,
-  PortfolioInner
+  PortfolioTitle
 } from './portfolioStyles'
 
 const Portfolio: React.FC = () => {
