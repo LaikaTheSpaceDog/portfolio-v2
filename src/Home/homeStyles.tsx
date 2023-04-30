@@ -95,3 +95,35 @@ export const HomeMain = styled.div`
     padding-top: 0;
   }
 `
+
+export const HomeIconsContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - 10rem);
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 1.25rem;
+  margin: 0 5rem;
+  gap: 1rem;
+`
+export const HomeIcon = styled.img`
+  width: 35px;
+  transition: 0.25s;
+  :focus,
+  :hover {
+    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+    transform: translateY(-0.25em);
+  }
+`
+export const HomeIconRound = styled.img`
+  width: 35px;
+  transition: 0.25s;
+  border-radius: 50%;
+  :focus,
+  :hover {
+    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+    transform: translateY(-0.25em);
+  }
+`

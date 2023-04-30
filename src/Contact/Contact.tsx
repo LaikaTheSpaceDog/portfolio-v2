@@ -1,6 +1,14 @@
 import React from 'react'
 
+import linkedinIcon from 'src/assets/images/icons/linkedin.svg'
+import githubIcon from 'src/assets/images/icons/github.svg'
+
 import {
+  ContactButton,
+  ContactButtonContainer,
+  ContactIcon,
+  ContactIconRound,
+  ContactIconsContainer,
   ContactInner,
   ContactSection,
   ContactText,
@@ -12,7 +20,31 @@ const Contact: React.FC = () => {
     <ContactSection id="contact">
       <ContactInner>
         <ContactTitle>Contact</ContactTitle>
-        <ContactText>Blah blah blah</ContactText>
+        <ContactText>
+          I&apos;m always interested in hearing about new and exciting
+          opportunities, so please feel free to get in touch!
+        </ContactText>
+        <ContactButtonContainer>
+          <ContactButton href="mailto:oscarjwales@gmaiul.com">
+            Say hello
+          </ContactButton>
+        </ContactButtonContainer>
+        <ContactIconsContainer>
+          <a
+            href="https://github.com/LaikaTheSpaceDog"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ContactIconRound src={githubIcon} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/oscar-wales/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ContactIcon src={linkedinIcon} />
+          </a>
+        </ContactIconsContainer>
       </ContactInner>
     </ContactSection>
   )

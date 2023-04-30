@@ -2,9 +2,15 @@ import React from 'react'
 import { Link } from 'react-scroll'
 
 import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
+import linkedinIcon from 'src/assets/images/icons/linkedin.svg'
+import emailIcon from 'src/assets/images/icons/email.svg'
+import githubIcon from 'src/assets/images/icons/github.svg'
 
 import {
   HomeHeader,
+  HomeIcon,
+  HomeIconRound,
+  HomeIconsContainer,
   HomeLogo,
   HomeMain,
   HomeMenu,
@@ -58,6 +64,25 @@ const Home: React.FC = () => {
           experiences.
         </HomeText>
       </HomeMain>
+      <HomeIconsContainer>
+        <a href="mailto:oscarjwales@gmail.com" target="_blank" rel="noreferrer">
+          <HomeIcon src={emailIcon} />
+        </a>
+        <a
+          href="https://github.com/LaikaTheSpaceDog"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HomeIconRound src={githubIcon} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/oscar-wales/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HomeIcon src={linkedinIcon} />
+        </a>
+      </HomeIconsContainer>
     </HomeSection>
   )
 }
