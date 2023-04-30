@@ -9,6 +9,7 @@ import githubIcon from 'src/assets/images/icons/github.svg'
 import {
   HomeHeader,
   HomeIcon,
+  HomeIconRound,
   HomeIconsContainer,
   HomeLogo,
   HomeMain,
@@ -72,7 +73,7 @@ const Home: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <HomeIcon src={githubIcon} />
+          <HomeIconRound src={githubIcon} />
         </a>
         <a
           href="https://www.linkedin.com/in/oscar-wales/"

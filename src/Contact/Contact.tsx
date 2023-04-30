@@ -1,8 +1,14 @@
 import React from 'react'
 
+import linkedinIcon from 'src/assets/images/icons/linkedin.svg'
+import githubIcon from 'src/assets/images/icons/github.svg'
+
 import {
   ContactButton,
   ContactButtonContainer,
+  ContactIcon,
+  ContactIconRound,
+  ContactIconsContainer,
   ContactInner,
   ContactSection,
   ContactText,
@@ -23,6 +29,22 @@ const Contact: React.FC = () => {
             Say hello
           </ContactButton>
         </ContactButtonContainer>
+        <ContactIconsContainer>
+          <a
+            href="https://github.com/LaikaTheSpaceDog"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ContactIconRound src={githubIcon} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/oscar-wales/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ContactIcon src={linkedinIcon} />
+          </a>
+        </ContactIconsContainer>
       </ContactInner>
     </ContactSection>
   )

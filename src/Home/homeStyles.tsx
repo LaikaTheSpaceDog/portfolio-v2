@@ -110,4 +110,20 @@ export const HomeIconsContainer = styled.div`
 `
 export const HomeIcon = styled.img`
   width: 35px;
+  transition: 0.25s;
+  :focus,
+  :hover {
+    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+    transform: translateY(-0.25em);
+  }
+`
+export const HomeIconRound = styled.img`
+  width: 35px;
+  transition: 0.25s;
+  border-radius: 50%;
+  :focus,
+  :hover {
+    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+    transform: translateY(-0.25em);
+  }
 `

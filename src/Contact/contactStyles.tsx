@@ -30,7 +30,7 @@ export const ContactText = styled.p`
 export const ContactButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 2rem 0 6rem 0;
+  margin: 2rem 0;
 `
 
 export const ContactButton = styled.a`
@@ -44,6 +44,34 @@ export const ContactButton = styled.a`
   transition: 0.25s;
   text-decoration: none;
 
+  :focus,
+  :hover {
+    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+    transform: translateY(-0.25em);
+  }
+`
+
+export const ContactIconsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+  gap: 2rem;
+`
+
+export const ContactIcon = styled.img`
+  width: 70px;
+  transition: 0.25s;
+  :focus,
+  :hover {
+    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+    transform: translateY(-0.25em);
+  }
+`
+
+export const ContactIconRound = styled.img`
+  width: 70px;
+  transition: 0.25s;
+  border-radius: 50%;
   :focus,
   :hover {
     box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
