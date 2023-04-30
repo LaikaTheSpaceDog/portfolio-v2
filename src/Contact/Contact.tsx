@@ -1,6 +1,8 @@
 import React from 'react'
 
 import {
+  ContactButton,
+  ContactButtonContainer,
   ContactInner,
   ContactSection,
   ContactText,
@@ -12,7 +14,15 @@ const Contact: React.FC = () => {
     <ContactSection id="contact">
       <ContactInner>
         <ContactTitle>Contact</ContactTitle>
-        <ContactText>Blah blah blah</ContactText>
+        <ContactText>
+          I&apos;m always interested in hearing about new and exciting
+          opportunities, so please feel free to get in touch!
+        </ContactText>
+        <ContactButtonContainer>
+          <ContactButton href="mailto:oscarjwales@gmaiul.com">
+            Say hello
+          </ContactButton>
+        </ContactButtonContainer>
       </ContactInner>
     </ContactSection>
   )
