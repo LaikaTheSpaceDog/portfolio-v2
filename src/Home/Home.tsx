@@ -15,6 +15,7 @@ import {
   HomeMain,
   HomeMenu,
   HomeMenuItem,
+  HomeMobileTitle,
   HomeSection,
   HomeStop,
   HomeSubtitle,
@@ -58,6 +59,10 @@ const Home: React.FC = () => {
         <HomeTitle>
           LaikaTheSpaceDog<HomeStop>|</HomeStop>
         </HomeTitle>
+        <HomeMobileTitle>Laika</HomeMobileTitle>
+        <HomeMobileTitle>
+          TheSpaceDog<HomeStop>|</HomeStop>
+        </HomeMobileTitle>
         <HomeSubtitle>Frontend Engineer</HomeSubtitle>
         <HomeText>
           I specialise in crafting beautiful frontend apps with great user

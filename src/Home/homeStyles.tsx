@@ -12,14 +12,41 @@ export const HomeSection = styled.section`
 `
 
 export const HomeTitle = styled.h1`
-  font-size: 6rem;
+  font-size: 5rem;
   color: ${palette.navy};
+  display: none;
+
+  @media (min-width: 970px) {
+    display: inline;
+  }
+
+  @media (min-width: 1129px) {
+    font-size: 6rem;
+  }
+`
+
+export const HomeMobileTitle = styled.h1`
+  font-size: 5rem;
+  color: ${palette.navy};
+  word-break: break-all;
+
+  @media (min-width: 970px) {
+    display: none;
+  }
 `
 
 export const HomeSubtitle = styled.h2`
-  font-size: 3rem;
+  font-size: 2rem;
   color: ${palette.navy};
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+
+  @media (min-width: 970px) {
+    margin-top: 0;
+  }
+
+  @media (min-width: 1129px) {
+    font-size: 3rem;
+  }
 `
 
 export const HomeText = styled.p`
