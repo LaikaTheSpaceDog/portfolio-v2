@@ -65,9 +65,6 @@ const GlobalStyle = createGlobalStyle`
     html {
         overflow-x: hidden;
     }
-    ::selection {
-        background: ${palette.yellow};
-    }
 `
 
 export default GlobalStyle
