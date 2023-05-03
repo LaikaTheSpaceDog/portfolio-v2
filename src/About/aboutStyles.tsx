@@ -25,10 +25,6 @@ export const AboutText = styled.p`
   color: ${palette.white};
   line-height: 1.5rem;
   padding-bottom: 0.5rem;
-
-  ::selection {
-    background: ${palette.red};
-  }
 `
 
 export const AboutTextSection = styled.div`

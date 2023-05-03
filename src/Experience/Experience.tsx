@@ -1,9 +1,9 @@
 import React from 'react'
 
+import Carousel from './Carousel'
 import {
   ExperienceInner,
   ExperienceSection,
-  ExperienceText,
   ExperienceTitle
 } from './experienceStyles'
 
@@ -12,7 +12,7 @@ const Experience: React.FC = () => {
     <ExperienceSection id="experience">
       <ExperienceInner>
         <ExperienceTitle>Experience</ExperienceTitle>
-        <ExperienceText>Blah blah blah</ExperienceText>
+        <Carousel />
       </ExperienceInner>
     </ExperienceSection>
   )
