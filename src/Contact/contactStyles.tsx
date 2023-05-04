@@ -61,6 +61,7 @@ export const ContactIconsContainer = styled.div`
 export const ContactIcon = styled.img`
   width: 70px;
   transition: 0.25s;
+  border-radius: 0.5rem;
   :focus,
   :hover {
     box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
