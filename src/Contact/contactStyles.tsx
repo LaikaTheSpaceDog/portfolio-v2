@@ -1,14 +1,22 @@
 import styled from 'styled-components'
 
-import { palette } from 'src/utils/styleVariables'
+import { device, palette } from 'src/utils/styleVariables'
 
 export const ContactSection = styled.section`
   background-color: ${palette.cream};
-  padding: 2.5rem 5rem;
+  padding: 2.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${device.mobileL} {
+    padding: 2.5rem 3rem;
+  }
+
+  @media ${device.laptop} {
+    padding: 2.5rem 5rem;
+  }
 `
 
 export const ContactInner = styled.div`
