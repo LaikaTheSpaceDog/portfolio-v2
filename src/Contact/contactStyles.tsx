@@ -26,9 +26,13 @@ export const ContactInner = styled.div`
 
 export const ContactTitle = styled.h2`
   color: ${palette.navy};
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   text-align: center;
+
+  @media ${device.laptop} {
+    font-size: 4rem;
+  }
 `
 
 export const ContactText = styled.p`

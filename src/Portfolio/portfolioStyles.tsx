@@ -21,12 +21,13 @@ export const PortfolioSection = styled.section`
 
 export const PortfolioTitle = styled.h2`
   color: ${palette.red};
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   text-align: center;
 
   @media ${device.laptop} {
     text-align: left;
+    font-size: 4rem;
   }
 `
 

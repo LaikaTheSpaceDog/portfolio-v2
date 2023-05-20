@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { palette } from 'src/utils/styleVariables'
+import { device, palette } from 'src/utils/styleVariables'
 
 export const ExperienceCarouselSlide = styled.div`
   display: inline-flex;
@@ -32,12 +32,18 @@ export const ExperienceCarouselSlide = styled.div`
 
 export const ExperienceCarousel = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
 `
 export const ExperienceCarouselSlides = styled.div`
   flex: 1;
   overflow: hidden;
+  max-width: 100%;
 `
 
 export const ExperienceCarouselSlidesInner = styled.div<{
@@ -50,8 +56,12 @@ export const ExperienceCarouselSlidesInner = styled.div<{
 
 export const ExperienceCarouselControls = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
+
+  @media ${device.laptop} {
+    flex-direction: column;
+  }
 `
 export const ExperienceCarouselControlsItem = styled.button<{
   active: boolean
@@ -64,12 +74,25 @@ export const ExperienceCarouselControlsItem = styled.button<{
   color: ${palette.navy};
   font-weight: 600;
   transition: 0.25s;
-  border-left: 4px solid ${palette.green};
+  border-bottom: 4px solid ${palette.green};
   font-size: 1rem;
+  min-width: 120px;
+  text-align: center;
 
   :hover {
     background: ${palette.red}50;
     color: ${palette.white};
+  }
+
+  @media ${device.mobileL} {
+    min-width: 156px;
+  }
+
+  @media ${device.laptop} {
+    border-bottom: none;
+    border-left: 4px solid ${palette.green};
+    min-width: 0px;
+    text-align: left;
   }
 `
 
@@ -77,12 +100,26 @@ export const ExperienceCarouselControlsHighlight = styled.div<{
   activeTabId: number
 }>`
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 35px;
-  width: 4px;
+  height: 4px;
+  width: 120px;
   background: ${palette.red};
-  transform: translateY(calc(${({ activeTabId }) => activeTabId} * 35px));
+  transform: translateX(calc(${({ activeTabId }) => activeTabId} * 120px));
   transition: transform 0.25s;
   transition-delay: 0.1s;
+
+  @media ${device.mobileL} {
+    width: 156px;
+    transform: translateX(calc(${({ activeTabId }) => activeTabId} * 156px));
+  }
+
+  @media ${device.laptop} {
+    transform: translateY(calc(${({ activeTabId }) => activeTabId} * 35px));
+    height: 35px;
+    width: 4px;
+    top: 0;
+    left: 0;
+    bottom: auto;
+  }
 `

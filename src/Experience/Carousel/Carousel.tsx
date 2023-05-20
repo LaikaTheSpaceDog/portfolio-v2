@@ -37,7 +37,7 @@ const Carousel: React.FC = () => {
 
   const expItems = [
     {
-      title: 'Associate Engineer at UW',
+      title: 'Associate Engineer at Utility Warehouse',
       subtitle: 'February 2022 – Present',
       points: [
         'Developing new features for the mobile and web apps, building new components and refactoring old parts of the codebase.',
