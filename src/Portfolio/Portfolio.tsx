@@ -5,6 +5,7 @@ import zoe from 'src/assets/images/zoe.png'
 import food from 'src/assets/images/food.png'
 import pong from 'src/assets/images/pong.png'
 import { ReactComponent as GithubIcon } from 'src/assets/images/icons/github.svg'
+import { palette } from 'src/utils/styleVariables'
 
 import {
   PortfolioIcon,
@@ -22,7 +23,8 @@ import {
 } from './portfolioStyles'
 
 const Portfolio: React.FC = () => {
-  const [iconFill, setIconFill] = useState('#ffffff')
+  const [iconFill, setIconFill] = useState(palette.white)
+  const darkIconFill = palette.navy
 
   const items = [
     {
@@ -30,23 +32,38 @@ const Portfolio: React.FC = () => {
       githubLink: 'https://github.com/LaikaTheSpaceDog/weldon-productions',
       desc: 'A custom Wordpress theme built for an independent theatre producer.',
       title: 'Zoe Weldon Productions',
-      image: zoe
+      image: zoe,
+      variant: 'dark'
     },
     {
       liveLink: 'https://laikathespacedog.github.io/food-atlas',
       githubLink: 'https://github.com/LaikaTheSpaceDog/food-atlas',
       desc: 'An interactive map that allows you to explore the national dishes of the world. Built using React, Redux and Laravel.',
       title: 'Food Atlas',
-      image: food
+      image: food,
+      variant: 'light'
     },
     {
       liveLink: 'https://laikathespacedog.github.io/pong',
       githubLink: 'https://github.com/LaikaTheSpaceDog/pong',
       desc: 'A pong-themed ping-pong tournament bracket creator. Built using React and Redux.',
       title: 'Ping-Pong',
-      image: pong
+      image: pong,
+      variant: 'dark'
     }
   ]
+
+  const handleMouseEnter = (): void => {
+    if (window.innerWidth >= 768) {
+      setIconFill(palette.yellow)
+    }
+  }
+
+  const handleMouseLeave = (): void => {
+    if (window.innerWidth >= 768) {
+      setIconFill(palette.white)
+    }
+  }
 
   return (
     <PortfolioSection id="portfolio">
@@ -87,13 +104,9 @@ const Portfolio: React.FC = () => {
                   rel="noreferrer"
                 >
                   <GithubIcon
-                    fill={iconFill}
-                    onMouseEnter={() => {
-                      setIconFill('#eeff41')
-                    }}
-                    onMouseLeave={() => {
-                      setIconFill('#ffffff')
-                    }}
+                    fill={item.variant === 'light' ? darkIconFill : iconFill}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                     style={{ transition: '0.25s' }}
                   />
                 </PortfolioIcon>
