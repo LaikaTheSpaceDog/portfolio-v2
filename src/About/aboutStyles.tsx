@@ -1,24 +1,43 @@
 import styled from 'styled-components'
 
-import { palette } from 'src/utils/styleVariables'
+import { device, palette } from 'src/utils/styleVariables'
 
 export const AboutSection = styled.section`
   background-color: ${palette.navy};
-  padding: 2.5rem 5rem;
+  padding: 2.5rem 1rem;
   display: flex;
   justify-content: center;
+
+  @media ${device.mobileL} {
+    padding: 2.5rem 3rem;
+  }
+
+  @media ${device.laptop} {
+    padding: 2.5rem 5rem;
+  }
 `
 
 export const AboutInner = styled.div`
   max-width: 1200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
 `
 
 export const AboutTitle = styled.h2`
   color: ${palette.red};
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
+  text-align: center;
+
+  @media ${device.laptop} {
+    font-size: 4rem;
+    text-align: left;
+  }
 `
 
 export const AboutText = styled.p`
@@ -28,28 +47,41 @@ export const AboutText = styled.p`
 `
 
 export const AboutTextSection = styled.div`
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  margin-bottom: 1rem;
+
+  @media ${device.laptop} {
+    width: 60%;
+    margin-bottom: 0;
+  }
 `
 
 export const AboutImageSection = styled.div`
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
   padding-left: 2rem;
+
+  @media ${device.laptop} {
+    width: 40%;
+    align-items: flex-end;
+  }
 `
 
 export const AboutImageContainer = styled.div`
-  width: 350px;
+  width: 250px;
   max-width: 100%;
   overflow: hidden;
   border-radius: 50%;
+
+  @media ${device.laptop} {
+    width: 350px;
+  }
 `
 
 export const AboutImage = styled.img`
