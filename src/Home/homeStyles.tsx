@@ -62,9 +62,15 @@ export const HomeStop = styled.span`
   }
 `
 export const HomeLogo = styled.div`
-  width: 200px;
-  height: 172.5px;
-  margin-left: -40px;
+  width: 150px;
+  height: 129.375px;
+  margin-left: -30px;
+
+  @media ${device.mobileL} {
+    width: 200px;
+    height: 172.5px;
+    margin-left: -40px;
+  }
 
   @media ${device.laptop} {
     svg {
