@@ -24,7 +24,7 @@ import {
 
 const About: React.FC = () => {
   return (
-    <AboutSection id="about">
+    <AboutSection id="about" aria-label="about section">
       <AboutInner>
         <AboutTextSection>
           <AboutTitle>About</AboutTitle>
@@ -41,34 +41,37 @@ const About: React.FC = () => {
           </AboutText>
           <AboutRow>
             <AboutTechItem>
-              <AboutIcon src={reactIcon} />
+              <AboutIcon src={reactIcon} aria-label="react logo" />
               <AboutText>React</AboutText>
             </AboutTechItem>
             <AboutTechItem>
-              <AboutIcon src={jsIcon} />
+              <AboutIcon src={jsIcon} aria-label="javascript logo" />
               <AboutText>JavaScript</AboutText>
             </AboutTechItem>
             <AboutTechItem>
-              <AboutIcon src={tsIcon} />
+              <AboutIcon src={tsIcon} aria-label="typescript logo" />
               <AboutText>TypeScript</AboutText>
             </AboutTechItem>
             <AboutTechItem>
-              <AboutIcon src={phpIcon} />
+              <AboutIcon src={phpIcon} aria-label="php logo" />
               <AboutText>PHP</AboutText>
             </AboutTechItem>
             <AboutTechItem>
-              <AboutIcon src={laravelIcon} />
+              <AboutIcon src={laravelIcon} aria-label="laravel icon" />
               <AboutText>Laravel</AboutText>
             </AboutTechItem>
             <AboutTechItem>
-              <AboutIcon src={wpIcon} />
+              <AboutIcon src={wpIcon} aria-label="wordpress icon" />
               <AboutText>WordPress</AboutText>
             </AboutTechItem>
           </AboutRow>
         </AboutTextSection>
         <AboutImageSection>
           <AboutImageContainer>
-            <AboutImage src={me} />
+            <AboutImage
+              src={me}
+              aria-label="profile photo of the LaikaTheSpaceDog"
+            />
           </AboutImageContainer>
         </AboutImageSection>
       </AboutInner>

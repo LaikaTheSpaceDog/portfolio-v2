@@ -67,7 +67,7 @@ const Portfolio: React.FC = () => {
   }
 
   return (
-    <PortfolioSection id="portfolio">
+    <PortfolioSection id="portfolio" aria-label="portfolio section">
       <PortfolioInner>
         <PortfolioItemsContainer>
           <PortfolioInfo>
@@ -79,11 +79,17 @@ const Portfolio: React.FC = () => {
                 href="https://github.com/LaikaTheSpaceDog"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="github link"
               >
                 GitHub
               </a>{' '}
               or{' '}
-              <Link to="contact" smooth={true} duration={500}>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                aria-label="link to contact section"
+              >
                 contact me
               </Link>{' '}
               below.
@@ -96,6 +102,7 @@ const Portfolio: React.FC = () => {
                   href={item.liveLink}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="link to portfolio item"
                 >
                   {item.desc}
                 </PortfolioLink>
@@ -103,6 +110,7 @@ const Portfolio: React.FC = () => {
                   href={item.githubLink}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="link to portfolio item's github repo"
                 >
                   <GithubIcon
                     fill={
@@ -113,11 +121,15 @@ const Portfolio: React.FC = () => {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     style={{ transition: '0.25s' }}
+                    aria-label="github icon"
                   />
                 </PortfolioIcon>
               </PortfolioImageMask>
               <PortfolioImageContainer>
-                <PortfolioImage src={item.image} />
+                <PortfolioImage
+                  src={item.image}
+                  aria-label="portfolio item screenshot image"
+                />
               </PortfolioImageContainer>
               <h3>{item.title}</h3>
             </PortfolioItem>

@@ -45,17 +45,22 @@ const Home: React.FC = () => {
   })
 
   return (
-    <HomeSection>
-      <HomeHeader>
-        <a href="/">
+    <HomeSection aria-label="home section">
+      <HomeHeader aria-label="header">
+        <a href="/" aria-label="home link">
           <HomeLogo>
-            <Logo />
+            <Logo aria-label="logo" />
           </HomeLogo>
         </a>
-        <HomeMenu>
+        <HomeMenu role="navigation" aria-label="menu">
           {menuItems.map((item) => (
             <HomeMenuItem key={item}>
-              <Link to={item.toLowerCase()} smooth={true} duration={500}>
+              <Link
+                to={item.toLowerCase()}
+                smooth={true}
+                duration={500}
+                aria-label={`link to ${item} section`}
+              >
                 {item}
               </Link>
             </HomeMenuItem>
@@ -63,7 +68,11 @@ const Home: React.FC = () => {
           {size.width <= 1024 && (
             <HomeMobileMenu onClick={handleClickMenu} src={menuIcon} />
           )}
-          <HomeMobileMenuList visible={mobileMenuVisible}>
+          <HomeMobileMenuList
+            visible={mobileMenuVisible}
+            role="navigation"
+            aria-label="mobile menu"
+          >
             {menuItems.map((item) => (
               <HomeMobileMenuListItem key={item}>
                 <Link
@@ -73,6 +82,7 @@ const Home: React.FC = () => {
                   onClick={() => {
                     setMobileMenuVisible(false)
                   }}
+                  aria-label="mobile menu item"
                 >
                   {item}
                 </Link>
@@ -92,13 +102,19 @@ const Home: React.FC = () => {
         </HomeText>
       </HomeMain>
       <HomeIconsContainer>
-        <a href="mailto:oscarjwales@gmail.com" target="_blank" rel="noreferrer">
+        <a
+          href="mailto:oscarjwales@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="email link"
+        >
           <HomeIcon src={emailIcon} />
         </a>
         <a
           href="https://github.com/LaikaTheSpaceDog"
           target="_blank"
           rel="noreferrer"
+          aria-label="github link"
         >
           <HomeIconRound src={githubIcon} />
         </a>
@@ -106,6 +122,7 @@ const Home: React.FC = () => {
           href="https://www.linkedin.com/in/oscar-wales/"
           target="_blank"
           rel="noreferrer"
+          aria-label="linkedin link"
         >
           <HomeIcon src={linkedinIcon} />
         </a>

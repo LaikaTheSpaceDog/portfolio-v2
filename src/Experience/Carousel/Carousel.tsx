@@ -76,6 +76,7 @@ const Carousel: React.FC = () => {
           onClick={() => {
             setActiveTabId(0)
           }}
+          aria-label="button to show Utility Warehouse item in experience carousel"
         >
           Utility Warehouse
         </ExperienceCarouselControlsItem>
@@ -84,6 +85,7 @@ const Carousel: React.FC = () => {
           onClick={() => {
             setActiveTabId(1)
           }}
+          aria-label="button to show Fanatic item in experience carousel"
         >
           Fanatic
         </ExperienceCarouselControlsItem>
@@ -92,6 +94,7 @@ const Carousel: React.FC = () => {
           onClick={() => {
             setActiveTabId(2)
           }}
+          aria-label="button to show Develop Me item in experience carousel"
         >
           Develop Me
         </ExperienceCarouselControlsItem>

@@ -17,7 +17,7 @@ import {
 
 const Contact: React.FC = () => {
   return (
-    <ContactSection id="contact">
+    <ContactSection id="contact" aria-label="contact section">
       <ContactInner>
         <ContactTitle>Contact</ContactTitle>
         <ContactText>
@@ -25,7 +25,10 @@ const Contact: React.FC = () => {
           opportunities, so please feel free to get in touch!
         </ContactText>
         <ContactButtonContainer>
-          <ContactButton href="mailto:oscarjwales@gmaiul.com">
+          <ContactButton
+            href="mailto:oscarjwales@gmaiul.com"
+            aria-label="email link"
+          >
             Say hello
           </ContactButton>
         </ContactButtonContainer>
@@ -34,6 +37,7 @@ const Contact: React.FC = () => {
             href="https://github.com/LaikaTheSpaceDog"
             target="_blank"
             rel="noreferrer"
+            aria-label="link to github profile"
           >
             <ContactIconRound src={githubIcon} />
           </a>
@@ -41,6 +45,7 @@ const Contact: React.FC = () => {
             href="https://www.linkedin.com/in/oscar-wales/"
             target="_blank"
             rel="noreferrer"
+            aria-label="link to linkedin profile"
           >
             <ContactIcon src={linkedinIcon} />
           </a>

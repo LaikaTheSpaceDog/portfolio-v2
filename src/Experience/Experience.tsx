@@ -9,7 +9,7 @@ import {
 
 const Experience: React.FC = () => {
   return (
-    <ExperienceSection id="experience">
+    <ExperienceSection id="experience" aria-label="experience-section">
       <ExperienceInner>
         <ExperienceTitle>Experience</ExperienceTitle>
         <Carousel />
