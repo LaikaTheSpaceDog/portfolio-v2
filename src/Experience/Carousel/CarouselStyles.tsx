@@ -34,10 +34,11 @@ export const ExperienceCarousel = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
 
   @media ${device.laptop} {
     flex-direction: row;
+    align-items: flex-start;
   }
 `
 export const ExperienceCarouselSlides = styled.div`
@@ -77,16 +78,19 @@ export const ExperienceCarouselControlsItem = styled.button<{
   border-bottom: 4px solid ${palette.green};
   font-size: 1rem;
   min-width: 120px;
+  width: 120px;
   text-align: center;
 
-  @media ${device.mobileL} {
+  @media (min-width: 566px) {
     min-width: 156px;
+    width: 156px;
   }
 
   @media ${device.laptop} {
     border-bottom: none;
     border-left: 4px solid ${palette.green};
     min-width: 0px;
+    width: auto;
     text-align: left;
 
     :hover,
