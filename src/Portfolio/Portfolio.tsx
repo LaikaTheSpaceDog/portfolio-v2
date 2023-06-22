@@ -6,6 +6,7 @@ import food from 'src/assets/images/food.png'
 import pong from 'src/assets/images/pong.png'
 import { ReactComponent as GithubIcon } from 'src/assets/images/icons/github.svg'
 import { palette } from 'src/utils/styleVariables'
+import useWindowSize from 'src/utils/useWindowSize'
 
 import {
   PortfolioIcon,
@@ -24,7 +25,7 @@ import {
 
 const Portfolio: React.FC = () => {
   const [iconFill, setIconFill] = useState(palette.white)
-  const darkIconFill = palette.navy
+  const size = useWindowSize()
 
   const items = [
     {
@@ -54,13 +55,13 @@ const Portfolio: React.FC = () => {
   ]
 
   const handleMouseEnter = (): void => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
       setIconFill(palette.yellow)
     }
   }
 
   const handleMouseLeave = (): void => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
       setIconFill(palette.white)
     }
   }
@@ -104,7 +105,11 @@ const Portfolio: React.FC = () => {
                   rel="noreferrer"
                 >
                   <GithubIcon
-                    fill={item.variant === 'light' ? darkIconFill : iconFill}
+                    fill={
+                      item.variant === 'light' && size.width <= 1024
+                        ? palette.navy
+                        : iconFill
+                    }
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     style={{ transition: '0.25s' }}
