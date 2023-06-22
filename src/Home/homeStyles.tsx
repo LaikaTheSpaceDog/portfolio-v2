@@ -1,37 +1,34 @@
 import styled from 'styled-components'
 
-import { palette } from 'src/utils/styleVariables'
+import { device, palette } from 'src/utils/styleVariables'
+
+interface HomeMobileMenuListProps {
+  visible: boolean
+}
 
 export const HomeSection = styled.section`
   height: 100vh;
   background-color: ${palette.cream};
-  padding: 1.25rem 5rem;
+  padding: 1.25rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${device.mobileL} {
+    padding: 2.5rem 3rem;
+  }
+
+  @media ${device.laptop} {
+    padding: 2.5rem 5rem;
+  }
 `
 
 export const HomeTitle = styled.h1`
   font-size: 5rem;
   color: ${palette.navy};
-  display: none;
-
-  @media (min-width: 970px) {
-    display: inline;
-  }
 
   @media (min-width: 1129px) {
     font-size: 6rem;
-  }
-`
-
-export const HomeMobileTitle = styled.h1`
-  font-size: 5rem;
-  color: ${palette.navy};
-  word-break: break-all;
-
-  @media (min-width: 970px) {
-    display: none;
   }
 `
 
@@ -82,8 +79,16 @@ export const HomeHeader = styled.header`
   margin: 1.25rem 0;
   position: absolute;
   justify-content: space-between;
-  width: calc(100vw - 10rem);
+  width: calc(100vw - 2rem);
   max-width: 1200px;
+
+  @media ${device.mobileL} {
+    width: calc(100vw - 6rem);
+  }
+
+  @media ${device.laptop} {
+    width: calc(100vw - 10rem);
+  }
 `
 
 export const HomeMenu = styled.div`
@@ -97,9 +102,14 @@ export const HomeMenuItem = styled.div`
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.5s ease;
   cursor: pointer;
+  display: none;
 
   :hover {
     border-bottom: 2px solid ${palette.red};
+  }
+
+  @media ${device.laptop} {
+    display: block;
   }
 
   a {
@@ -126,14 +136,26 @@ export const HomeMain = styled.div`
 export const HomeIconsContainer = styled.div`
   position: absolute;
   bottom: 0;
-  width: calc(100vw - 10rem);
+  width: calc(100vw - 2rem);
   max-width: 1200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   padding-bottom: 1.25rem;
-  margin: 0 5rem;
+  margin: 0 1rem;
   gap: 1rem;
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    margin: 0 3rem;
+    width: calc(100vw - 6rem);
+  }
+
+  @media ${device.laptop} {
+    flex-direction: column;
+    margin: 0 5rem;
+    width: calc(100vw - 10rem);
+  }
 `
 export const HomeIcon = styled.img`
   width: 35px;
@@ -152,5 +174,36 @@ export const HomeIconRound = styled.img`
   :hover {
     box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
     transform: translateY(-0.25em);
+  }
+`
+export const HomeMobileMenu = styled.img`
+  width: 35px;
+  cursor: pointer;
+  @media ${device.laptop} {
+    display: none;
+  }
+`
+export const HomeMobileMenuList = styled.ul<HomeMobileMenuListProps>`
+  position: absolute;
+  overflow: hidden;
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  height: ${(props) => (props.visible ? '128px' : '0px')};
+  top: 8rem;
+  right: 0;
+  text-align: right;
+  transition: all 0.3s ease-in-out;
+`
+
+export const HomeMobileMenuListItem = styled.li`
+  padding-bottom: 1rem;
+
+  a {
+    font-weight: 600;
+    color: ${palette.navy};
+    cursor: pointer;
+
+    :hover {
+      color: ${palette.red};
+    }
   }
 `

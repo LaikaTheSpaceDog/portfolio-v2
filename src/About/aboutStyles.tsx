@@ -65,11 +65,11 @@ export const AboutImageSection = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-left: 2rem;
 
   @media ${device.laptop} {
     width: 40%;
     align-items: flex-end;
+    padding-left: 2rem;
   }
 `
 
@@ -93,6 +93,13 @@ export const AboutImage = styled.img`
 export const AboutRow = styled.div`
   display: flex;
   padding-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media ${device.mobileL} {
+    flex-wrap: no-wrap;
+    justify-content: flex-start;
+  }
 `
 
 export const AboutTechItem = styled.div`

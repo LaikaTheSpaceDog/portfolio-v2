@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 
 import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
 import linkedinIcon from 'src/assets/images/icons/linkedin.svg'
 import emailIcon from 'src/assets/images/icons/email.svg'
 import githubIcon from 'src/assets/images/icons/github.svg'
+import menuIcon from 'src/assets/images/icons/menu.svg'
 
 import {
   HomeHeader,
@@ -15,7 +16,9 @@ import {
   HomeMain,
   HomeMenu,
   HomeMenuItem,
-  HomeMobileTitle,
+  HomeMobileMenu,
+  HomeMobileMenuList,
+  HomeMobileMenuListItem,
   HomeSection,
   HomeStop,
   HomeSubtitle,
@@ -24,6 +27,14 @@ import {
 } from './homeStyles'
 
 const Home: React.FC = () => {
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
+
+  const handleClickMenu = (): void => {
+    setMobileMenuVisible(!mobileMenuVisible)
+  }
+
+  const menuItems = ['About', 'Experience', 'Portfolio', 'Contact']
+
   return (
     <HomeSection>
       <HomeHeader>
@@ -33,36 +44,36 @@ const Home: React.FC = () => {
           </HomeLogo>
         </a>
         <HomeMenu>
-          <HomeMenuItem>
-            <Link to="about" smooth={true} duration={500}>
-              About
-            </Link>
-          </HomeMenuItem>
-          <HomeMenuItem>
-            <Link to="experience" smooth={true} duration={500}>
-              Experience
-            </Link>
-          </HomeMenuItem>
-          <HomeMenuItem>
-            <Link to="portfolio" smooth={true} duration={500}>
-              Portfolio
-            </Link>
-          </HomeMenuItem>
-          <HomeMenuItem>
-            <Link to="contact" smooth={true} duration={500}>
-              Contact
-            </Link>
-          </HomeMenuItem>
+          {menuItems.map((item) => (
+            <HomeMenuItem key={item}>
+              <Link to={item.toLowerCase()} smooth={true} duration={500}>
+                {item}
+              </Link>
+            </HomeMenuItem>
+          ))}
+          <HomeMobileMenu onClick={handleClickMenu} src={menuIcon} />
+          <HomeMobileMenuList visible={mobileMenuVisible}>
+            {menuItems.map((item) => (
+              <HomeMobileMenuListItem key={item}>
+                <Link
+                  to={item.toLowerCase()}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => {
+                    setMobileMenuVisible(false)
+                  }}
+                >
+                  {item}
+                </Link>
+              </HomeMobileMenuListItem>
+            ))}
+          </HomeMobileMenuList>
         </HomeMenu>
       </HomeHeader>
       <HomeMain>
         <HomeTitle>
-          LaikaTheSpaceDog<HomeStop>|</HomeStop>
+          Laika Dev<HomeStop>|</HomeStop>
         </HomeTitle>
-        <HomeMobileTitle>Laika</HomeMobileTitle>
-        <HomeMobileTitle>
-          TheSpaceDog<HomeStop>|</HomeStop>
-        </HomeMobileTitle>
         <HomeSubtitle>Frontend Engineer</HomeSubtitle>
         <HomeText>
           I specialise in crafting beautiful frontend apps with great user
