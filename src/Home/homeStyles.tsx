@@ -201,6 +201,10 @@ export const HomeMobileMenuList = styled.ul<HomeMobileMenuListProps>`
   right: 0;
   text-align: right;
   transition: all 0.3s ease-in-out;
+
+  @media ${device.laptop} {
+    display: none;
+  }
 `
 
 export const HomeMobileMenuListItem = styled.li`

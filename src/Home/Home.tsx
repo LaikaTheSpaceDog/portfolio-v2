@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 
 import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
@@ -6,6 +6,7 @@ import linkedinIcon from 'src/assets/images/icons/linkedin.svg'
 import emailIcon from 'src/assets/images/icons/email.svg'
 import githubIcon from 'src/assets/images/icons/github.svg'
 import menuIcon from 'src/assets/images/icons/menu.svg'
+import useWindowSize from 'src/utils/useWindowSize'
 
 import {
   HomeHeader,
@@ -29,11 +30,19 @@ import {
 const Home: React.FC = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
 
+  const size = useWindowSize()
+
   const handleClickMenu = (): void => {
     setMobileMenuVisible(!mobileMenuVisible)
   }
 
   const menuItems = ['About', 'Experience', 'Portfolio', 'Contact']
+
+  useEffect(() => {
+    if (size.width > 1024) {
+      setMobileMenuVisible(false)
+    }
+  })
 
   return (
     <HomeSection>
@@ -51,7 +60,9 @@ const Home: React.FC = () => {
               </Link>
             </HomeMenuItem>
           ))}
-          <HomeMobileMenu onClick={handleClickMenu} src={menuIcon} />
+          {size.width <= 1024 && (
+            <HomeMobileMenu onClick={handleClickMenu} src={menuIcon} />
+          )}
           <HomeMobileMenuList visible={mobileMenuVisible}>
             {menuItems.map((item) => (
               <HomeMobileMenuListItem key={item}>
