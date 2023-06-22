@@ -79,11 +79,6 @@ export const ExperienceCarouselControlsItem = styled.button<{
   min-width: 120px;
   text-align: center;
 
-  :hover {
-    background: ${palette.red}50;
-    color: ${palette.white};
-  }
-
   @media ${device.mobileL} {
     min-width: 156px;
   }
@@ -93,6 +88,12 @@ export const ExperienceCarouselControlsItem = styled.button<{
     border-left: 4px solid ${palette.green};
     min-width: 0px;
     text-align: left;
+
+    :hover,
+    :focus {
+      background: ${palette.red}50;
+      color: ${palette.white};
+    }
   }
 `
 

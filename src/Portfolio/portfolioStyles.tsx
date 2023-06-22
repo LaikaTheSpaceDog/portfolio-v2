@@ -100,7 +100,8 @@ export const PortfolioItem = styled.div`
   @media ${device.laptop} {
     width: calc(50% - 1rem);
 
-    :hover {
+    :hover,
+    :focus {
       transform: translateY(-1.5em);
 
       h3 {
@@ -166,7 +167,8 @@ export const PortfolioImageMask = styled.div`
     z-index: 10;
     order: 1;
     margin-bottom: 0;
-    :hover {
+    :hover,
+    :focus {
       opacity: 0.95;
     }
   }

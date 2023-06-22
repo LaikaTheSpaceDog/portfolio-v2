@@ -66,10 +66,12 @@ export const HomeLogo = styled.div`
   height: 172.5px;
   margin-left: -40px;
 
-  svg {
-    :hover {
-      .bolt {
-        fill: ${palette.red};
+  @media ${device.laptop} {
+    svg {
+      :hover {
+        .bolt {
+          fill: ${palette.red};
+        }
       }
     }
   }
@@ -104,12 +106,13 @@ export const HomeMenuItem = styled.div`
   cursor: pointer;
   display: none;
 
-  :hover {
-    border-bottom: 2px solid ${palette.red};
-  }
-
   @media ${device.laptop} {
     display: block;
+
+    :hover,
+    :focus {
+      border-bottom: 2px solid ${palette.red};
+    }
   }
 
   a {
@@ -160,20 +163,26 @@ export const HomeIconsContainer = styled.div`
 export const HomeIcon = styled.img`
   width: 35px;
   transition: 0.25s;
-  :focus,
-  :hover {
-    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
-    transform: translateY(-0.25em);
+
+  @media ${device.laptop} {
+    :focus,
+    :hover {
+      box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+      transform: translateY(-0.25em);
+    }
   }
 `
 export const HomeIconRound = styled.img`
   width: 35px;
   transition: 0.25s;
   border-radius: 50%;
-  :focus,
-  :hover {
-    box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
-    transform: translateY(-0.25em);
+
+  @media ${device.laptop} {
+    :focus,
+    :hover {
+      box-shadow: 0 0.5em 0.9em -0.6em ${palette.navy};
+      transform: translateY(-0.25em);
+    }
   }
 `
 export const HomeMobileMenu = styled.img`
@@ -202,8 +211,11 @@ export const HomeMobileMenuListItem = styled.li`
     color: ${palette.navy};
     cursor: pointer;
 
-    :hover {
-      color: ${palette.red};
+    @media ${device.laptop} {
+      :hover,
+      :focus {
+        color: ${palette.red};
+      }
     }
   }
 `
