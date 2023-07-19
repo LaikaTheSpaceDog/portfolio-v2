@@ -24,8 +24,12 @@ export const HomeSection = styled.section`
 `
 
 export const HomeTitle = styled.h1`
-  font-size: 5rem;
+  font-size: 4rem;
   color: ${palette.navy};
+
+  @media ${device.tablet} {
+    font-size: 5rem;
+  }
 
   @media (min-width: 1129px) {
     font-size: 6rem;
@@ -133,11 +137,14 @@ export const HomeMain = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: calc(172.5px + 2.5rem);
+  padding-top: calc(129.375px + 2.5rem);
   flex: 1;
   width: 100%;
   max-width: 1200px;
-  @media (min-height: 700px) {
+  @media ${device.mobileL} {
+    padding-top: calc(172.5px + 2.5rem);
+  }
+  @media (min-height: 600px) {
     padding-top: 0;
   }
 `
