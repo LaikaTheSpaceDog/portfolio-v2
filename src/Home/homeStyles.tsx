@@ -137,14 +137,14 @@ export const HomeMain = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: calc(129.375px + 2.5rem);
+  padding-top: 0;
   flex: 1;
   width: 100%;
   max-width: 1200px;
   @media ${device.mobileL} {
     padding-top: calc(172.5px + 2.5rem);
   }
-  @media (min-height: 600px) {
+  @media (min-height: 650px) {
     padding-top: 0;
   }
 `
