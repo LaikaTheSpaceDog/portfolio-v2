@@ -53,6 +53,7 @@ export const HomeSubtitle = styled.h2`
 export const HomeText = styled.p`
   color: ${palette.navy};
   font-size: 1.5em;
+  padding-bottom: 2rem;
 `
 
 export const HomeStop = styled.span`
@@ -89,13 +90,13 @@ export const HomeLogo = styled.div`
 export const HomeHeader = styled.header`
   display: flex;
   margin: 1.25rem 0;
-  position: absolute;
   justify-content: space-between;
   width: calc(100vw - 2rem);
   max-width: 1200px;
 
   @media ${device.mobileL} {
     width: calc(100vw - 6rem);
+    position: absolute;
   }
 
   @media ${device.laptop} {
@@ -150,7 +151,6 @@ export const HomeMain = styled.div`
 `
 
 export const HomeIconsContainer = styled.div`
-  position: absolute;
   bottom: 0;
   width: calc(100vw - 2rem);
   max-width: 1200px;
@@ -165,6 +165,7 @@ export const HomeIconsContainer = styled.div`
     flex-direction: column;
     margin: 0 3rem;
     width: calc(100vw - 6rem);
+    position: absolute;
   }
 
   @media ${device.laptop} {
@@ -210,10 +211,15 @@ export const HomeMobileMenuList = styled.ul<HomeMobileMenuListProps>`
   overflow: hidden;
   opacity: ${(props) => (props.visible ? 1 : 0)};
   height: ${(props) => (props.visible ? '128px' : '0px')};
-  top: 8rem;
-  right: 0;
+  right: 1rem;
+  top: 9rem;
   text-align: right;
   transition: all 0.3s ease-in-out;
+
+  @media ${device.mobileL} {
+    right: 0rem;
+    top: 8rem;
+  }
 
   @media ${device.laptop} {
     display: none;
