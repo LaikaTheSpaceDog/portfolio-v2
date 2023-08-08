@@ -80,6 +80,7 @@ export const ExperienceCardHeader = styled.button`
   width: 100%;
   text-align: left;
   cursor: pointer;
+  color: ${palette.black};
 `
 
 export const ExperienceIcon = styled.img`
@@ -104,6 +105,7 @@ export const ExperienceIconContainer = styled.div<ExperienceIconContainerProps>`
 
 export const ExperienceCardDetails = styled.ul<ExperienceCardDetailsProps>`
   transition: ease-in-out 0.25s;
+  will-change: contents;
   overflow: ${(props) => (props.visible ? 'visible' : 'hidden')};
   opacity: ${(props) => (props.visible ? 1 : 0)};
   height: ${(props) => (props.visible ? `${props.maxHeight}px` : '0px')};

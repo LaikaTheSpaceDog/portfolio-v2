@@ -116,9 +116,16 @@ export const PortfolioItem = styled.div`
     width: calc(100% - 32px);
     order: 2;
     padding-bottom: 0.5rem;
+    text-decoration: underline;
+    width: 100%;
 
     @media ${device.laptop} {
       order: 3;
+      position: absolute;
+      padding-bottom: 0;
+      bottom: -1rem;
+      left: 0;
+      text-decoration: none;
     }
   }
 `
