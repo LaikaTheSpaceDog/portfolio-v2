@@ -67,13 +67,14 @@ const ExperienceItem: React.FC<ExperienceItemsProps> = ({ item }) => {
         onClick={() => {
           setVisible(!visible)
         }}
+        aria-label="clickable accordion header for experience section"
       >
         <div>
           <h3>{item.title}</h3>
           <h4>{item.subtitle}</h4>
         </div>
         <ExperienceIconContainer open={visible}>
-          <ExperienceIcon src={addIcon} />
+          <ExperienceIcon src={addIcon} aria-label="open and close icon" />
         </ExperienceIconContainer>
       </ExperienceCardHeader>
       <ExperienceCardDetails
