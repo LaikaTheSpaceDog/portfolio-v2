@@ -27,6 +27,7 @@ export const ExperienceCarouselSlide = styled.div`
     white-space: normal;
     padding-bottom: 0.75rem;
     margin-left: 1rem;
+    line-height: 1.5rem;
   }
 `
 
