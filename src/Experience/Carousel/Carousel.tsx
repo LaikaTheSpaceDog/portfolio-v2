@@ -20,6 +20,7 @@ interface CarouselProps {
 }
 
 const CarouselItem: React.FC<ExperienceItemsProps> = ({ item }) => {
+  // Component inspired by and based on Brittany Chiang's carousel component: https://github.com/bchiang7/v4/blob/main/src/components/sections/jobs.js
   return (
     <ExperienceCarouselSlide>
       <h2>{item.title}</h2>
