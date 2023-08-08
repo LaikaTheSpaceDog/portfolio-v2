@@ -104,6 +104,7 @@ const Portfolio: React.FC = () => {
                   rel="noreferrer"
                   aria-label="link to portfolio item"
                 >
+                  <h3>{item.title}</h3>
                   {item.desc}
                 </PortfolioLink>
                 <PortfolioIcon
@@ -131,7 +132,6 @@ const Portfolio: React.FC = () => {
                   aria-label="portfolio item screenshot image"
                 />
               </PortfolioImageContainer>
-              <h3>{item.title}</h3>
             </PortfolioItem>
           ))}
         </PortfolioItemsContainer>

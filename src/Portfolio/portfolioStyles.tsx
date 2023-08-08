@@ -103,10 +103,6 @@ export const PortfolioItem = styled.div`
     :hover,
     :focus {
       transform: translateY(-1.5em);
-
-      h3 {
-        display: inline-block;
-      }
     }
   }
 
@@ -119,11 +115,9 @@ export const PortfolioItem = styled.div`
     text-align: center;
     width: calc(100% - 32px);
     order: 2;
+    padding-bottom: 0.5rem;
 
     @media ${device.laptop} {
-      display: none;
-      position: absolute;
-      bottom: -16px;
       order: 3;
     }
   }
@@ -140,11 +134,11 @@ export const PortfolioImage = styled.img`
 
 export const PortfolioImageContainer = styled.div`
   position: relative;
-  margin-bottom: 0.5rem;
   order: 1;
 
   @media ${device.laptop} {
     order: 2;
+    margin-bottom: 0.5rem;
   }
 `
 
