@@ -5,7 +5,7 @@
   "importStringConfiguration.tabSize": 2,
   "importSorter.sortConfiguration.removeUnusedImports": true,
   "importSorter.sortConfiguration.joinImportPaths": true,
-  "importSorter.importStringConfiguration.trailingComma": "multi",
+  "importSorter.importStringConfiguration.trailingComma": "none",
   "importSorter.sortConfiguration.customOrderingRules.rules": [
     {
       "regex": "^src",
