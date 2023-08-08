@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
         </ContactText>
         <ContactButtonContainer>
           <ContactButton
-            href="mailto:oscarjwales@gmaiul.com"
+            href="mailto:oscarjwales@gmail.com"
             aria-label="email link"
           >
             Say hello
